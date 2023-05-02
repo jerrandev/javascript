@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+
+    <style>
+        body {
+            background-color: blanchedalmond;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14pt;
+            
+        }
+        h1#titulo {
+            color: brown;
+            
+        }
+
+        div#resultado {
+            margin-top: 20px;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="caixa">
+        <h1 id="titulo">Nacionalidade</h1>
+        <p>Em qual país você nasceu?</p>
+        <input type="text" name="nacionalidade" id="nacionalidade">
+        <input type="button" value="Verificar" onclick="verificarnacionalidade()">
+        <div id="resultado"></div>
+    </div>
+        <script>
+            var país = document.getElementById('nacionalidade')
+            var res = document.getElementById('resultado')
+        
+            function verificarnacionalidade() {
+                if (país.value == 'Brasil'){
+                res.innerHTML = `Que legal, se você nasceu no <strong>${país.value}</strong>, então você é Brasileiro.`
+                }
+                else {
+                    res.innerHTML = `Você é estrangeiro, pois você nasceu no ${país.value}. Me desculpe, mas aqui, só resolvemos problemas para nacionais.`
+                }
+            }
+        </script>
+    
+</body>
+</html>

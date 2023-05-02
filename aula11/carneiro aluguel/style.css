@@ -1,0 +1,10 @@
+body {
+    display: inline-block;
+    max-width: 1200px;
+    max-height: 720px;
+}
+div.class {
+    display: inline-block;
+    width: 1200px;
+    height: 720px;
+}
